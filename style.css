@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
+main {
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 90%;
+    padding: 20px;
+    background-color: white;
+    height: 100%;
+    border-radius: 10px 10px 150px 10px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.dates label {
+    display: block;
+    color: hsl(0, 1%, 44%);
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+.dates input {
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid hsl(0, 1%, 44%);
+    padding: 5px 15px;
+    font-size: 2rem;
+}
+.dates input::placeholder {
+    color: black;
+}
+.button {
+    background-color: hsl(259, 100%, 65%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 20px;
+    background-image: url(assets/images/icon-arrow.svg);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border: none;
+    cursor: pointer;
+}
+.button img {
+    height: 30px;
+}
+.getDate {
+    align-self: self-start;
+}
+.getDate p, .getDate span {
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+}
+.getDate span {
+    color: hsl(259, 100%, 65%);
+}
+@media (min-width: 1280px) {
+    .card {
+        padding-left: 40px;
+    }
+    main {
+        padding-top: 0px;
+    }
+    .getDate p, .getDate span {
+        font-size: 6rem;
+    }
+    .dates {
+        max-width: 400px;
+        align-self: flex-start;
+    }
+}
